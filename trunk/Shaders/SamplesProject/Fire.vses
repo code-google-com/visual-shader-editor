@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualShaderEditorMaterial>
+  <Blocks>
+    <Block Type="Core.Blocks.Input.VerticesStream, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="99ebbee3-9f4f-47cb-8d6f-abb9eae0f70c" Position="875.4512 48.38318" BlockComment="">
+      <Output Id="7840e852-011e-4d47-ae15-a35f76e56c04" Name="iPosition" Format="FLOAT4" Semantic="POSITION" Index="0" />
+      <Output Id="7840e345-011e-4d47-ae15-a35f76e56c04" Name="iTexCoord0" Format="FLOAT2" Semantic="TEXCOORD" Index="0" />
+      <Output Id="7840e345-011e-4d47-ae15-a35f76e23c04" Name="iColor" Format="FLOAT4" Semantic="COLOR" Index="0" />
+    </Block>
+    <Block Type="Core.Blocks.Texture.SamplerWithTexture, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="e4a7548b-d869-49ac-817c-23df60410acb" Position="396.4522 449.3832" BlockComment="" BindName="Texture" FileName="../Data/TexturePlasma.jpg">
+      <Output Id="005d9ff7-273a-4c87-bbd2-1e4bbf46e27b" Name="Color" Format="FLOAT4" />
+      <Input Id="e5f26f3d-9682-4788-881e-e0dcc86163f8" Name="TCoord" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Operators.Add, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="f60b3fb0-ecd5-4601-94b2-6d7dc0a57978" Position="609.452 439.3832" BlockComment="">
+      <Output Id="012a3218-dc7a-4cbe-bf6d-c2cdac440ac9" Name="Output" Format="FLOAT4" />
+      <Input Id="34378610-e8c2-4b79-b086-c2109fbdae6f" Name="Input0" />
+      <Input Id="4c10156f-09e7-4dd5-8a17-7d1a7327d622" Name="Input1" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Vector.VectorMix, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="61af1581-48a3-49c7-bfd2-ea652bbea413" Position="708.4521 473.3831" BlockComment="">
+      <Output Id="70b8f836-dcf2-44b8-bb6d-db7cccc87784" Name="Output" Format="FLOAT4" />
+      <Input Id="ed858762-a222-429a-b347-b9c504d67d4b" Name="A" />
+      <Input Id="12e822ab-2554-4f50-b17d-8d9f654de0c7" Name="B" />
+      <MemberInputSelector Id="0" ConstValue="0" VectorMember="X" InputName="A" />
+      <MemberInputSelector Id="1" ConstValue="0" VectorMember="Y" InputName="B" />
+      <MemberInputSelector Id="2" ConstValue="0" VectorMember="None" InputName="" />
+      <MemberInputSelector Id="3" ConstValue="0" VectorMember="None" InputName="" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Other.OneMinusX, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="79d5504b-d3d1-4528-bf20-4581678a4f7c" Position="798.9896 519.2292" BlockComment="">
+      <Output Id="2e1d62ca-77e2-4c6e-9b2c-89f6f8d2a8eb" Name="Output" Format="FLOAT" />
+      <Input Id="48c264dd-7a06-4685-a723-667e69a35b19" Name="X" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Operators.Add, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="1a524e42-4f4d-4430-a0b9-9acaa5357b7e" Position="220.2985 297.614" BlockComment="">
+      <Output Id="573e799e-9264-43df-9bc5-e5f74548cfc6" Name="Output" Format="FLOAT4" />
+      <Input Id="3fc87ba1-83ee-4f20-8935-6f7931ad1eb7" Name="Input0" />
+      <Input Id="6fe64948-55f1-49c7-abb1-7bce56ebd584" Name="Input1" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Vector.VectorMix, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="1b2817c1-ec7e-4cba-b05a-239d48082147" Position="492.4521 226.3834" BlockComment="">
+      <Output Id="756e4353-4c45-45a1-81a7-e0376c0482d8" Name="Output" Format="FLOAT" />
+      <Input Id="5d338a13-03a5-414a-8559-d942c81dab30" Name="A" />
+      <MemberInputSelector Id="0" ConstValue="0" VectorMember="Y" InputName="A" />
+      <MemberInputSelector Id="1" ConstValue="0" VectorMember="Y" InputName="A" />
+      <MemberInputSelector Id="2" ConstValue="0" VectorMember="Z" InputName="A" />
+      <MemberInputSelector Id="3" ConstValue="0" VectorMember="W" InputName="A" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Operators.Mul, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="11098f85-6005-4177-835b-5af5dc0e1f56" Position="571.452 283.3832" BlockComment="">
+      <Output Id="ac0a8e20-6922-4df9-ae32-69c03c9a6235" Name="Output" Format="FLOAT2" />
+      <Input Id="4b27d938-2b97-4f14-8831-596a8add98ab" Name="Input0" />
+      <Input Id="0f48485a-7c45-4e0b-b1e1-067b3bbb03d6" Name="Input1" />
+    </Block>
+    <Block Type="Core.Blocks.Input.Constant, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="27d6eed8-addc-477a-a680-6b40720fe7a9" Position="637.4514 208.3832" BlockComment="">
+      <Output Id="a23a1f45-77f8-49e7-b9f4-f0f8e1417b37" Name="B" Format="FLOAT" Value="-2" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Operators.Add, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="3a02d441-1c18-480e-97d6-5a8c8d869669" Position="302.4524 192.3834" BlockComment="">
+      <Output Id="f1ae60c6-f293-4a59-887f-23a086ba4cd7" Name="Output" Format="FLOAT4" />
+      <Input Id="90c85077-a623-4302-9e1b-06795b32a9fe" Name="Input0" />
+      <Input Id="a1ea5b49-7591-4f65-92c9-2b5f84ae8962" Name="Input1" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Vector.Dot, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="e3332b2c-2d09-402c-81d0-28ff4d60ebcf" Position="311.4524 440.3832" BlockComment="">
+      <Output Id="8b0bd169-022b-428e-9c3c-2af1eaf87813" Name="Output" Format="FLOAT" />
+      <Input Id="e2f95bff-77e1-4fda-9105-86dcccd90362" Name="Input0" />
+      <Input Id="d0de6dab-7928-4259-817a-5ef07092756d" Name="Input1" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Operators.Mul, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="51d986cb-edcd-4a0a-b051-588e3d357a35" Position="89.75996 270.2293" BlockComment="">
+      <Output Id="cd32cd9d-516f-4587-a003-3dd73d92a094" Name="Output" Format="FLOAT3" />
+      <Input Id="0d633e30-729f-4fb9-a7b9-8b6c536529db" Name="Input0" />
+      <Input Id="5bef5e5a-411d-4842-84cf-ad500a9fb18f" Name="Input1" />
+    </Block>
+    <Block Type="Core.Blocks.Input.Constant, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="9b46e2b3-3697-4c81-8ad5-b3b7ae064ced" Position="148.6831 181.9987" BlockComment="">
+      <Output Id="85e67123-59c1-4319-9f61-90792144a639" Name="gdf" Format="FLOAT3" Value="0.7 0.5 0" />
+    </Block>
+    <Block Type="Core.Blocks.Input.SystemParameter, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="d0c58dc7-56a3-4500-b721-19df179e7eb6" Position="797.6121 430.6674" BlockComment="">
+      <Output Id="08c8aeef-5528-41ae-a4d7-17bc19e708cb" Name="SinTime" Format="FLOAT" />
+    </Block>
+    <Block Type="Core.Blocks.Input.SystemParameter, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="a10ab72a-ccfb-46b5-a947-a76946d9790e" Position="886.689 521.5905" BlockComment="">
+      <Output Id="6a10ea73-7b06-4acc-ba32-c9ddb1476f91" Name="Time" Format="FLOAT" />
+    </Block>
+    <Block Type="Core.Blocks.Output.ShaderOutput, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="3749af34-e85c-4aac-a835-b6b83a9026c6" Position="17.07391 90.51372" BlockComment="">
+      <Input Id="2b2aa697-a639-4f67-8861-017edc12b8dd" Name="oPosition" Semantic="POSITION" Index="0" Format="FLOAT4" />
+      <Input Id="594cf310-69ee-4654-8251-4ebb31445c9f" Name="oColor" Semantic="COLOR" Index="0" Format="FLOAT4" />
+    </Block>
+    <Block Type="Core.Blocks.Input.SystemParameter, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="39247bcc-fe09-4b58-a6d7-4b8d0266edca" Position="402.6123 101.6676" BlockComment="">
+      <Output Id="a95b9661-8f14-4ffc-8f4c-35b2bc2a29b9" Name="ModelViewProjection" Format="FLOAT4X4" />
+    </Block>
+    <Block Type="Core.Blocks.Position.TransformPosition, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="8e1ac762-204c-49e5-8092-73e6fdb3b29d" Position="334.6123 18.66748" BlockComment="">
+      <Output Id="466eaabb-a307-4e97-b4d1-65db1446f2ad" Name="Output" Format="FLOAT4" />
+      <Input Id="37add13d-9ce4-4ad1-a264-38ef36fbc4bd" Name="Input" />
+      <Input Id="51f6e7a1-eb8b-414d-bf0b-465c7d2bcfad" Name="Matrix" />
+    </Block>
+    <Block Type="Core.Blocks.Input.Constant, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="c20f3707-1921-4d29-8d57-ae4effc0c3ab" Position="370.7693 339.2308" BlockComment="">
+      <Output Id="80c1315d-d841-460a-abdf-95cc0d71649b" Name="d" Format="FLOAT3" Value="0.3 0.3 0.3" />
+    </Block>
+  </Blocks>
+  <Connections>
+    <Connection InputId="e5f26f3d-9682-4788-881e-e0dcc86163f8" OutputId="012a3218-dc7a-4cbe-bf6d-c2cdac440ac9" />
+    <Connection InputId="34378610-e8c2-4b79-b086-c2109fbdae6f" OutputId="7840e345-011e-4d47-ae15-a35f76e56c04" />
+    <Connection InputId="4c10156f-09e7-4dd5-8a17-7d1a7327d622" OutputId="70b8f836-dcf2-44b8-bb6d-db7cccc87784" />
+    <Connection InputId="ed858762-a222-429a-b347-b9c504d67d4b" OutputId="08c8aeef-5528-41ae-a4d7-17bc19e708cb" />
+    <Connection InputId="12e822ab-2554-4f50-b17d-8d9f654de0c7" OutputId="2e1d62ca-77e2-4c6e-9b2c-89f6f8d2a8eb" />
+    <Connection InputId="48c264dd-7a06-4685-a723-667e69a35b19" OutputId="6a10ea73-7b06-4acc-ba32-c9ddb1476f91" />
+    <Connection InputId="3fc87ba1-83ee-4f20-8935-6f7931ad1eb7" OutputId="f1ae60c6-f293-4a59-887f-23a086ba4cd7" />
+    <Connection InputId="6fe64948-55f1-49c7-abb1-7bce56ebd584" OutputId="8b0bd169-022b-428e-9c3c-2af1eaf87813" />
+    <Connection InputId="5d338a13-03a5-414a-8559-d942c81dab30" OutputId="ac0a8e20-6922-4df9-ae32-69c03c9a6235" />
+    <Connection InputId="4b27d938-2b97-4f14-8831-596a8add98ab" OutputId="a23a1f45-77f8-49e7-b9f4-f0f8e1417b37" />
+    <Connection InputId="0f48485a-7c45-4e0b-b1e1-067b3bbb03d6" OutputId="7840e345-011e-4d47-ae15-a35f76e56c04" />
+    <Connection InputId="90c85077-a623-4302-9e1b-06795b32a9fe" OutputId="7840e852-011e-4d47-ae15-a35f76e56c04" />
+    <Connection InputId="a1ea5b49-7591-4f65-92c9-2b5f84ae8962" OutputId="756e4353-4c45-45a1-81a7-e0376c0482d8" />
+    <Connection InputId="e2f95bff-77e1-4fda-9105-86dcccd90362" OutputId="80c1315d-d841-460a-abdf-95cc0d71649b" />
+    <Connection InputId="d0de6dab-7928-4259-817a-5ef07092756d" OutputId="005d9ff7-273a-4c87-bbd2-1e4bbf46e27b" />
+    <Connection InputId="0d633e30-729f-4fb9-a7b9-8b6c536529db" OutputId="85e67123-59c1-4319-9f61-90792144a639" />
+    <Connection InputId="5bef5e5a-411d-4842-84cf-ad500a9fb18f" OutputId="8b0bd169-022b-428e-9c3c-2af1eaf87813" />
+    <Connection InputId="2b2aa697-a639-4f67-8861-017edc12b8dd" OutputId="466eaabb-a307-4e97-b4d1-65db1446f2ad" />
+    <Connection InputId="594cf310-69ee-4654-8251-4ebb31445c9f" OutputId="cd32cd9d-516f-4587-a003-3dd73d92a094" />
+    <Connection InputId="37add13d-9ce4-4ad1-a264-38ef36fbc4bd" OutputId="7840e852-011e-4d47-ae15-a35f76e56c04" />
+    <Connection InputId="51f6e7a1-eb8b-414d-bf0b-465c7d2bcfad" OutputId="a95b9661-8f14-4ffc-8f4c-35b2bc2a29b9" />
+  </Connections>
+</VisualShaderEditorMaterial>
