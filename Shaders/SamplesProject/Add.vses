@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualShaderEditorMaterial>
+  <Blocks>
+    <Block Type="Core.Blocks.Output.ShaderOutput, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="6b233fa3-7f3d-4f82-b975-8e288341ca55" Position="61 49" BlockComment="">
+      <Input Id="761d4ac1-54e0-453c-a562-0380aa6040ab" Name="oPosition" Semantic="POSITION" Index="0" Format="FLOAT4" />
+      <Input Id="e01c7e50-ca8a-48d1-bcfb-0c92c597cdd7" Name="oColor" Semantic="COLOR" Index="0" Format="FLOAT4" />
+    </Block>
+    <Block Type="Core.Blocks.Input.VerticesStream, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="426aa749-15cc-41c8-ba45-250376271bb5" Position="572 65" BlockComment="">
+      <Output Id="c5515886-305e-4bd0-b033-2ad3fd1b5b72" Name="iPosition" Format="FLOAT4" Semantic="POSITION" Index="0" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Operators.Add, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="789b9fb9-badd-4b88-9d85-e454d925be2f" Position="384 263" BlockComment="">
+      <Output Id="30e9f448-9b6f-4728-bad2-825d16856200" Name="Output" Format="FLOAT4" />
+      <Input Id="0b7ba120-63c4-4014-bc5c-7113a7c7fe65" Name="Input0" />
+      <Input Id="09203e87-2fdf-4f10-b810-c975d8b6a8b8" Name="Input1" />
+    </Block>
+    <Block Type="Core.Blocks.Position.TransformPosition, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="6e270b9e-1848-43e0-bf21-d688d07f19cb" Position="207 31" BlockComment="">
+      <Output Id="8ff90dde-9057-4e6a-af17-7939dbf982a3" Name="Output" Format="FLOAT4" />
+      <Input Id="3df57f06-f67e-47d0-ac74-45b0e9f63797" Name="Input" />
+      <Input Id="06281f09-0164-47f7-aaca-b7f4ea347df2" Name="Matrix" />
+    </Block>
+    <Block Type="Core.Blocks.Input.SystemParameter, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="9b6ce78b-85dc-4b82-b5ad-57c9bc13dfd0" Position="283 110" BlockComment="">
+      <Output Id="35f7d8be-b64e-4b9b-86b4-9250161e3ead" Name="ModelViewProjection" Format="FLOAT4X4" />
+    </Block>
+    <Block Type="Core.Blocks.Input.Constant, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="f7a58630-dbd5-42f8-90f4-704c1b84f1f0" Position="480 344" BlockComment="">
+      <Output Id="f2fd2648-37f2-4fe3-8a3e-48a86ad4be57" Name="sss" Format="FLOAT4" Value="1 0 0 0" />
+    </Block>
+  </Blocks>
+  <Connections>
+    <Connection InputId="761d4ac1-54e0-453c-a562-0380aa6040ab" OutputId="8ff90dde-9057-4e6a-af17-7939dbf982a3" />
+    <Connection InputId="e01c7e50-ca8a-48d1-bcfb-0c92c597cdd7" OutputId="30e9f448-9b6f-4728-bad2-825d16856200" />
+    <Connection InputId="0b7ba120-63c4-4014-bc5c-7113a7c7fe65" OutputId="c5515886-305e-4bd0-b033-2ad3fd1b5b72" />
+    <Connection InputId="09203e87-2fdf-4f10-b810-c975d8b6a8b8" OutputId="f2fd2648-37f2-4fe3-8a3e-48a86ad4be57" />
+    <Connection InputId="3df57f06-f67e-47d0-ac74-45b0e9f63797" OutputId="c5515886-305e-4bd0-b033-2ad3fd1b5b72" />
+    <Connection InputId="06281f09-0164-47f7-aaca-b7f4ea347df2" OutputId="35f7d8be-b64e-4b9b-86b4-9250161e3ead" />
+  </Connections>
+</VisualShaderEditorMaterial>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualShaderEditorProject>
+  <Files>
+    <File FilePath="Simple.vses" />
+    <File FilePath="Fire.vses" />
+    <File FilePath="SimpleTexture.vses" />
+    <File FilePath="Add.vses" />
+    <File FilePath="Math.vses" />
+    <File FilePath="ForceVS.vses" />
+    <File FilePath="InputTest.vses" />
+    <File FilePath="Light.vses" />
+  </Files>
+</VisualShaderEditorProject>

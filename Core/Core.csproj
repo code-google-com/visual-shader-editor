@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A73E473F-2D68-4E42-90FA-DB643D5B649F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic\BaseBlock.cs" />
+    <Compile Include="Basic\BlockAttribute.cs" />
+    <Compile Include="Basic\BlockInput.cs" />
+    <Compile Include="Basic\BlockIOBase.cs" />
+    <Compile Include="Basic\BlockOutput.cs" />
+    <Compile Include="Basic\Format.cs" />
+    <Compile Include="Basic\IOptionsWindow.cs" />
+    <Compile Include="Basic\ListHelper.cs" />
+    <Compile Include="Basic\Math.cs" />
+    <Compile Include="Basic\SemanticBlockInput.cs" />
+    <Compile Include="Basic\SemanticBlockOutput.cs" />
+    <Compile Include="Basic\StageType.cs" />
+    <Compile Include="Basic\ValueBlockOutput.cs" />
+    <Compile Include="Basic\VerticesStreamSemantic.cs" />
+    <Compile Include="Blocks\ControlFlow\If.cs" />
+    <Compile Include="Blocks\Input\ConstantOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Input\ConstantOptionsWindow.Designer.cs">
+      <DependentUpon>ConstantOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Input\SystemParameter.cs" />
+    <Compile Include="Blocks\Input\SystemParameterOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Input\SystemParameterOptionsWindow.Designer.cs">
+      <DependentUpon>SystemParameterOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Input\UserParameter.cs" />
+    <Compile Include="Blocks\Input\UserParameterOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Input\UserParameterOptionsWindow.Designer.cs">
+      <DependentUpon>UserParameterOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Input\VerticesStreamOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Input\VerticesStreamOptionsWindow.Designer.cs">
+      <DependentUpon>VerticesStreamOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Math\Operators\Pow.cs" />
+    <Compile Include="Blocks\Math\Other\Abs.cs" />
+    <Compile Include="Blocks\Math\Other\Clamp.cs" />
+    <Compile Include="Blocks\Math\Other\ClampOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Math\Other\ClampOptionsWindow.Designer.cs">
+      <DependentUpon>ClampOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Math\Other\Lerp.cs" />
+    <Compile Include="Blocks\Math\Scalar\Cosinus.cs" />
+    <Compile Include="Blocks\Math\Vector\Cross.cs" />
+    <Compile Include="Blocks\Math\Operators\Div.cs" />
+    <Compile Include="Blocks\Math\Vector\Dot.cs" />
+    <Compile Include="Blocks\Math\Operators\Mul.cs" />
+    <Compile Include="Blocks\Math\Operators\Negative.cs" />
+    <Compile Include="Blocks\Math\Other\OneMinusX.cs" />
+    <Compile Include="Blocks\Math\Scalar\Sinus.cs" />
+    <Compile Include="Blocks\Math\Operators\Sub.cs" />
+    <Compile Include="Blocks\Math\Vector\Length.cs" />
+    <Compile Include="Blocks\Math\Vector\Normalize.cs" />
+    <Compile Include="Blocks\Math\Vector\VectorMix.cs" />
+    <Compile Include="Blocks\Math\Vector\VectorMixOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Math\Vector\VectorMixOptionsWindow.Designer.cs">
+      <DependentUpon>VectorMixOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\OptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\OptionsWindow.Designer.cs">
+      <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Output\ShaderOutputOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Output\ShaderOutputOptionsWindow.Designer.cs">
+      <DependentUpon>ShaderOutputOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Position\TransformPosition.cs" />
+    <Compile Include="Blocks\Special\VSForce.cs" />
+    <Compile Include="Blocks\Texture\SamplerWithTexture.cs" />
+    <Compile Include="Blocks\Texture\SamplerWithTextureOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Texture\SamplerWithTextureOptionsWindow.Designer.cs">
+      <DependentUpon>SamplerWithTextureOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeGeneration\BasicInstructions.cs" />
+    <Compile Include="CodeGeneration\Code\BinaryExpression.cs" />
+    <Compile Include="CodeGeneration\Code\CallExpression.cs" />
+    <Compile Include="CodeGeneration\Code\ConstExpression.cs" />
+    <Compile Include="CodeGeneration\Code\CreateVariableInstruction.cs" />
+    <Compile Include="CodeGeneration\Code\Expression.cs" />
+    <Compile Include="CodeGeneration\Code\IfInstruction.cs" />
+    <Compile Include="CodeGeneration\Code\Instruction.cs" />
+    <Compile Include="CodeGeneration\Code\SwizzleExpression.cs" />
+    <Compile Include="CodeGeneration\Code\UnaryExpression.cs" />
+    <Compile Include="CodeGeneration\Code\VariableExpression.cs" />
+    <Compile Include="CodeGeneration\Code\VectorConstructorExpression.cs" />
+    <Compile Include="CodeGeneration\InstructionGenerator.cs" />
+    <Compile Include="CodeGeneration\InstructionHelper.cs" />
+    <Compile Include="CodeGeneration\InstructionListBuilder.cs" />
+    <Compile Include="CodeGeneration\ShaderCode.cs" />
+    <Compile Include="CodeGeneration\ShaderCodeGenerator.cs" />
+    <Compile Include="Environment\ISystemParameters.cs" />
+    <Compile Include="Helper\SphereModel.cs" />
+    <Compile Include="Helper\SystemParameters.cs" />
+    <Compile Include="Helper\VectorHelper.cs" />
+    <Compile Include="Var\Variable.cs" />
+    <Compile Include="Environment\ICompiledShader.cs" />
+    <Compile Include="Environment\IModel.cs" />
+    <Compile Include="Environment\IWorkSpace.cs" />
+    <Compile Include="Environment\Texture\ITexture.cs" />
+    <Compile Include="Environment\Texture\ITextureManager.cs" />
+    <Compile Include="Helper\Font.cs" />
+    <Compile Include="Var\VariableManager.cs" />
+    <Compile Include="WorkSpaceController\Block.cs" />
+    <Compile Include="WorkSpaceController\DrawHelper.cs" />
+    <Compile Include="Main\Log.cs" />
+    <Compile Include="Main\Profile.cs" />
+    <Compile Include="Main\ProjectFile.cs" />
+    <Compile Include="Main\StaticBase.cs" />
+    <Compile Include="Blocks\Input\Constant.cs" />
+    <Compile Include="Blocks\Input\VerticesStream.cs" />
+    <Compile Include="Blocks\Math\Operators\Add.cs" />
+    <Compile Include="Blocks\Output\ShaderOutput.cs" />
+    <Compile Include="Environment\EnvironmentAttribute.cs" />
+    <Compile Include="Main\EnvironmentManager.cs" />
+    <Compile Include="Environment\IEnvironment.cs" />
+    <Compile Include="Environment\IPreview.cs" />
+    <Compile Include="Main\BlockList.cs" />
+    <Compile Include="Main\BlockManager.cs" />
+    <Compile Include="Main\Project.cs" />
+    <Compile Include="WorkSpaceController\WorkSpaceController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Blocks\Input\ConstantOptionsWindow.resx">
+      <DependentUpon>ConstantOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Input\SystemParameterOptionsWindow.resx">
+      <DependentUpon>SystemParameterOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Input\UserParameterOptionsWindow.resx">
+      <DependentUpon>UserParameterOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Input\VerticesStreamOptionsWindow.resx">
+      <DependentUpon>VerticesStreamOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Math\Other\ClampOptionsWindow.resx">
+      <DependentUpon>ClampOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Math\Vector\VectorMixOptionsWindow.resx">
+      <DependentUpon>VectorMixOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\OptionsWindow.resx">
+      <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Output\ShaderOutputOptionsWindow.resx">
+      <DependentUpon>ShaderOutputOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Texture\SamplerWithTextureOptionsWindow.resx">
+      <DependentUpon>SamplerWithTextureOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

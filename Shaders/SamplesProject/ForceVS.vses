@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualShaderEditorMaterial>
+  <Blocks>
+    <Block Type="Core.Blocks.Output.ShaderOutput, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="44a1ca52-7f45-43af-bf8a-05d810ab90e2" Position="98 52" BlockComment="">
+      <Input Id="1ebca3a5-6acb-486f-9725-32a4ad18bda7" Name="oPosition" Semantic="POSITION" Index="0" Format="FLOAT4" />
+      <Input Id="cba07e42-696b-46cb-ae58-5dfa692becd6" Name="oColor" Semantic="COLOR" Index="0" Format="FLOAT4" />
+    </Block>
+    <Block Type="Core.Blocks.Input.VerticesStream, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="f986adec-f6e5-4370-9da4-6204f45e3230" Position="192 51" BlockComment="">
+      <Output Id="6c88e2a9-b585-44be-82bf-cb457c88713f" Name="iPosition" Format="FLOAT4" Semantic="POSITION" Index="0" />
+    </Block>
+    <Block Type="Core.Blocks.Math.Scalar.Sinus, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="338d4d2a-c5e2-48b4-868c-c593b9ce4f28" Position="310 167" BlockComment="">
+      <Output Id="c760258b-ea5a-4054-8dbe-a7c323f4a582" Name="Output" Format="FLOAT" />
+      <Input Id="7632c494-e706-4f12-9e18-1ffa36a37a47" Name="Input" />
+    </Block>
+    <Block Type="Core.Blocks.Input.SystemParameter, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="5627c327-05a5-4a6f-89e2-584ac024c7cc" Position="387 168" BlockComment="">
+      <Output Id="1265bec5-e722-4319-8ee6-c9a535b12353" Name="Time" Format="FLOAT" />
+    </Block>
+    <Block Type="Core.Blocks.Special.VSForce, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Id="266376c5-3036-4a1b-ba30-421855129c71" Position="225 168" BlockComment="">
+      <Output Id="da00d76c-7683-471c-a7d5-72041cae12a8" Name="PS" Format="FLOAT" />
+      <Input Id="e9e386f7-0a86-498d-b04e-ae63cf54ca23" Name="VS" />
+    </Block>
+  </Blocks>
+  <Connections>
+    <Connection InputId="1ebca3a5-6acb-486f-9725-32a4ad18bda7" OutputId="6c88e2a9-b585-44be-82bf-cb457c88713f" />
+    <Connection InputId="cba07e42-696b-46cb-ae58-5dfa692becd6" OutputId="da00d76c-7683-471c-a7d5-72041cae12a8" />
+    <Connection InputId="7632c494-e706-4f12-9e18-1ffa36a37a47" OutputId="1265bec5-e722-4319-8ee6-c9a535b12353" />
+    <Connection InputId="e9e386f7-0a86-498d-b04e-ae63cf54ca23" OutputId="c760258b-ea5a-4054-8dbe-a7c323f4a582" />
+  </Connections>
+</VisualShaderEditorMaterial>
